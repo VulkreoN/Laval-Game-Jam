@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 3802028709366865378}
   - component: {fileID: 3802028709366865377}
   - component: {fileID: 4936302912675374465}
+  - component: {fileID: 5409844624814007070}
   m_Layer: 0
   m_Name: chicken
   m_TagString: Untagged
@@ -497,7 +498,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armature: {fileID: 6460215045820964238}
   lookSegment: {fileID: 9083299317416061462}
+  meshObject: {fileID: 7267515779537643201}
+  materials:
+  - {fileID: 2100000, guid: e82e3e87d111d8a49b638e2cfab5ea86, type: 2}
+  - {fileID: 2100000, guid: f577572c7f772184fa74a8a36ae206b0, type: 2}
+  - {fileID: 2100000, guid: 15cf758065b78224d82fbee349228bb5, type: 2}
+  - {fileID: 2100000, guid: c98027577ab899141ae283d1a51eca78, type: 2}
+  life: 5
+  testHit: 0
   player: {fileID: 0}
+--- !u!95 &5409844624814007070
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802028709366865376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfce979731254fd4792c904782e83159, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3860808554115749567
 GameObject:
   m_ObjectHideFlags: 0
