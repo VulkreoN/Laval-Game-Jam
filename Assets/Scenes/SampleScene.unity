@@ -223,8 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3812524499930608072, guid: e9bf0b45ba11a424ebe482a0a8a6ffc2,
     type: 3}
-  speed: 300
-  Head: {fileID: 0}
+  speed: 600
+  Head: {fileID: 330585546}
 --- !u!4 &162847231
 Transform:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFocusRequired: 0
+  isFocusRequired: 1
   keywords:
   - keyword: Fire
     response:
@@ -734,6 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974107274}
   - component: {fileID: 1974107273}
+  - component: {fileID: 1974107275}
   m_Layer: 0
   m_Name: ElectricBallTracker
   m_TagString: Untagged
@@ -753,11 +754,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50e7cf39018cc940b6cc7f8b0093086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftTumbTip: {fileID: 0}
-  LeftIndexTip: {fileID: 0}
+  LeftTumbTip: {fileID: 1100510303}
+  LeftIndexTip: {fileID: 875269037}
   spellFired:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162847230}
+        m_TargetAssemblyTypeName: ElectroSpell, Assembly-CSharp
+        m_MethodName: Cast
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   firingSpell:
     m_PersistentCalls:
       m_Calls: []
@@ -776,6 +789,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974107275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974107272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusRequired: 1
+  keywords:
+  - keyword: Zap
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 162847230}
+          m_TargetAssemblyTypeName: ElectroSpell, Assembly-CSharp
+          m_MethodName: Cast
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  persistentKeywords: 0
+  speechConfirmationTooltipPrefab: {fileID: 0}
 --- !u!1001 &7731057505431664775
 PrefabInstance:
   m_ObjectHideFlags: 0
