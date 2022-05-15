@@ -15,6 +15,7 @@ public class MobSpawner : MonoBehaviour
     public float wanderingHeight = 1f;
     private Vector3 randomTarget = Vector3.zero;
     private Rigidbody rb;
+    public MobSpawnManager mobSpawnManager;
     [SerializeField] private float acceleration = 0.1f;
     [SerializeField] private float maxSpeed = 1f;
 
@@ -79,7 +80,10 @@ public class MobSpawner : MonoBehaviour
                 GameObject mob = Instantiate(mobPrefab, hit.transform.position, Quaternion.identity);
                 Mob mob_scp = mob.GetComponent<Mob>();
                 mob_scp.player = player;
-                
+                mob_scp.mobSpawnManager = mobSpawnManager;
+                mobSpawnManager.mobs.Add(mob_scp);
+                mobSpawnManager.spawners.Remove(this);
+
                 Destroy(hitObject.gameObject);
                 Destroy(this.gameObject);
             }

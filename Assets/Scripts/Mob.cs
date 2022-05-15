@@ -12,11 +12,12 @@ public class Mob : MonoBehaviour
     [SerializeField] bool testHit = false;
 
     public GameObject player;
-    Pathfinding.AIPath aiPath;
-    Pathfinding.AIDestinationSetter des;
+    public Pathfinding.AIPath aiPath;
+    public Pathfinding.AIDestinationSetter des;
     BioIK.BioIK bones = null;
-    Animator animator;
+    public Animator animator;
     SkinnedMeshRenderer smr;
+    public MobSpawnManager mobSpawnManager;
     bool dead = false;
 
     // Start is called before the first frame update
@@ -62,6 +63,7 @@ public class Mob : MonoBehaviour
         animator.SetTrigger("dead");
         yield return new WaitForSeconds(1.8f);
         Destroy(gameObject);
+        mobSpawnManager.mobs.Remove(this);
     }
 
         public void HitMob(float damage)
@@ -77,9 +79,9 @@ public class Mob : MonoBehaviour
     void Update()
     {
         if (des)
-            des.target = player.transform;
+            //des.target = player.transform;
 
-        if (animator)
+        if (animator && aiPath)
             animator.SetFloat("Speed", aiPath.velocity.magnitude);
 
         if (testHit)

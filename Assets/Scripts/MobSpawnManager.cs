@@ -11,7 +11,10 @@ public class MobSpawnManager : MonoBehaviour
     [SerializeField] private int maxMobs = 10;
     [SerializeField] private List<GameObject> mobsPrefab;
     [SerializeField] private GameObject mobsSpawnerPrefab;
-    
+
+    public List<MobSpawner> spawners = new List<MobSpawner>();
+    public List<Mob> mobs = new List<Mob>();
+
     private float currentInterval = 0;
     private float timer = 0f;
     
@@ -19,8 +22,11 @@ public class MobSpawnManager : MonoBehaviour
     {
         GameObject spawner = Instantiate(mobsSpawnerPrefab, transform.position, Quaternion.identity);
         MobSpawner spawner_scp = spawner.GetComponent<MobSpawner>();
-        spawner_scp.mobPrefab = mobsPrefab[Random.Range(0, mobsPrefab.Count)];
+        GameObject randomMob = mobsPrefab[Random.Range(0, mobsPrefab.Count)];
+        spawner_scp.mobPrefab = randomMob;
         spawner_scp.player = player;
+        spawner_scp.mobSpawnManager = this;
+        spawners.Add(spawner_scp);
     }
     
     // Start is called before the first frame update
@@ -35,7 +41,7 @@ public class MobSpawnManager : MonoBehaviour
 
     private void SpawnMob()
     {
-        if (currentInterval < timer)
+        if (currentInterval < timer && mobs.Count + spawners.Count < maxMobs)
         {
             Spawn();
             currentInterval = Random.Range(spawnMinInterval, spawnMaxIterval);
