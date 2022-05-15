@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class FireSpell : MonoBehaviour
+public class ElectroSpell : MonoBehaviour
 {
     public GameObject projectile;
     public float speed = 300f;
@@ -11,7 +11,6 @@ public class FireSpell : MonoBehaviour
 
     public void Cast()
     {
-        Debug.Log("testing...");
         try
         {
             GameObject ball = Instantiate(projectile, Head.position, Head.rotation);
