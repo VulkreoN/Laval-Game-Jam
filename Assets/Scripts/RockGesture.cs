@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ElectroGesture : MonoBehaviour
+public class RockGesture : MonoBehaviour
 {
-    public Transform MajTip;
-    public Transform IndexTip;
+    public Transform LeftIndex;
+    public Transform RightIndex;
     public LockingScript lockingScript;
     public string hand;
     public UnityEvent<string> spellFired = new UnityEvent<string>();
@@ -22,13 +22,14 @@ public class ElectroGesture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isFiring && Vector3.Distance(IndexTip.position, MajTip.position) < 0.04)
+        Debug.Log(Vector3.Distance(LeftIndex.position, RightIndex.position));
+        if (!isFiring && Vector3.Distance(LeftIndex.position, RightIndex.position) < 0.04)
         {
             isFiring = true;
             Debug.Log("fire?");
             firingSpell.Invoke(hand);
         }
-        if (isFiring && Vector3.Distance(IndexTip.position, MajTip.position) > 0.04)
+        if (isFiring && Vector3.Distance(LeftIndex.position, RightIndex.position) > 0.04)
         {
             Debug.Log("fire!!");
             isFiring = false;

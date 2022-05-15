@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class FireSpell : MonoBehaviour
+public class SpellThrower : MonoBehaviour
 {
     public GameObject projectile;
     public float speed = 300f;
