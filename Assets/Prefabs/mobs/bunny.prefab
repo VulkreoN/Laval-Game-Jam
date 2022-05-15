@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 6934764407096924379}
   m_Layer: 0
   m_Name: bunny
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c98027577ab899141ae283d1a51eca78, type: 2}
   life: 10
   testHit: 0
+  damages: 0
   player: {fileID: 0}
   aiPath: {fileID: 0}
   des: {fileID: 0}

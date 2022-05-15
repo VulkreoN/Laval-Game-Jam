@@ -24,10 +24,26 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("trigger");
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("ptrigger");
+            PlayerManager pm = other.gameObject.GetComponent<PlayerManager>();
+            pm.TakeDamage(1);
+            Destroy(gameObject);
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision");
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("pcollision");
+            PlayerManager pm = collision.gameObject.GetComponent<PlayerManager>();
+            pm.TakeDamage(1);
             Destroy(gameObject);
         }
     }

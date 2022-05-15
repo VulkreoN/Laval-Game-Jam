@@ -4853,6 +4853,8 @@ GameObject:
   - component: {fileID: 3812524499930608074}
   - component: {fileID: 3812524499930608073}
   - component: {fileID: -1379812860279611731}
+  - component: {fileID: 5684035504794264320}
+  - component: {fileID: 3658091815290894200}
   m_Layer: 0
   m_Name: Electrique
   m_TagString: Untagged
@@ -4934,7 +4936,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3812524499930608072}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -4955,3 +4957,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5684035504794264320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3812524499930608072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de581ae4471f5d4596d8ca4894bfc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &3658091815290894200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3812524499930608072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de581ae4471f5d4596d8ca4894bfc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

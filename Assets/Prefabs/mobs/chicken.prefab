@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 5409844624814007070}
   m_Layer: 0
   m_Name: chicken
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,6 +507,10 @@ MonoBehaviour:
   life: 5
   testHit: 0
   player: {fileID: 0}
+  aiPath: {fileID: 0}
+  des: {fileID: 0}
+  animator: {fileID: 0}
+  mobSpawnManager: {fileID: 0}
 --- !u!95 &5409844624814007070
 Animator:
   serializedVersion: 4

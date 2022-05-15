@@ -22,7 +22,7 @@ public class RockGesture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Vector3.Distance(LeftIndex.position, RightIndex.position));
+        //Debug.Log(Vector3.Distance(LeftIndex.position, RightIndex.position));
         if (!isFiring && Vector3.Distance(LeftIndex.position, RightIndex.position) < 0.04)
         {
             isFiring = true;

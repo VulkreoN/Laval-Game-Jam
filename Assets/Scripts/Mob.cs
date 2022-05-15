@@ -10,6 +10,7 @@ public class Mob : MonoBehaviour
     [SerializeField] List<Material> materials;
     [SerializeField] float life = 5f;
     [SerializeField] bool testHit = false;
+    [SerializeField] public int damages = 1;
 
     public GameObject player;
     public Pathfinding.AIPath aiPath;
@@ -96,5 +97,26 @@ public class Mob : MonoBehaviour
             StartCoroutine(Die());
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("trigger");
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("ptrigger");
+            PlayerManager pm = other.gameObject.GetComponent<PlayerManager>();
+            pm.TakeDamage(1);
+            Destroy(gameObject);
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerManager pm = collision.gameObject.GetComponent<PlayerManager>();
+            pm.TakeDamage(damages);
+        }
     }
 }

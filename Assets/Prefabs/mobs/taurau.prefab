@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 12950196022170811}
   - component: {fileID: 12950196022170820}
   - component: {fileID: 12950196022170821}
+  - component: {fileID: 392763169278371894}
   m_Layer: 0
   m_Name: taurau
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,11 +214,25 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c98027577ab899141ae283d1a51eca78, type: 2}
   life: 20
   testHit: 0
+  damages: 3
   player: {fileID: 0}
   aiPath: {fileID: 0}
   des: {fileID: 0}
   animator: {fileID: 0}
   mobSpawnManager: {fileID: 0}
+--- !u!114 &392763169278371894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12950196022170816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726cc38260862904a9ab380b59ba6662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minY: -20
 --- !u!1001 &12950194379912852
 PrefabInstance:
   m_ObjectHideFlags: 0
