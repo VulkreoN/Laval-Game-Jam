@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.microsoft.mixedreality.movingplatform": {
-      "version": "file:MixedReality/com.microsoft.mixedreality.movingplatform-0.0.3.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {}
-    },
     "com.microsoft.mixedreality.openxr": {
       "version": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.0.tgz",
       "depth": 0,
@@ -16,11 +10,14 @@
         "com.unity.xr.openxr": "1.3.1"
       }
     },
-    "com.microsoft.mixedreality.sceneunderstanding": {
-      "version": "file:MixedReality/com.microsoft.mixedreality.sceneunderstanding-0.6.0.tgz",
+    "com.microsoft.mixedreality.toolkit.examples": {
+      "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.examples-2.7.3.tgz",
       "depth": 0,
       "source": "local-tarball",
-      "dependencies": {}
+      "dependencies": {
+        "com.microsoft.mixedreality.toolkit.foundation": "2.7.3",
+        "com.microsoft.mixedreality.toolkit.extensions": "2.7.3"
+      }
     },
     "com.microsoft.mixedreality.toolkit.extensions": {
       "version": "file:MixedReality/com.microsoft.mixedreality.toolkit.extensions-2.7.3.tgz",
