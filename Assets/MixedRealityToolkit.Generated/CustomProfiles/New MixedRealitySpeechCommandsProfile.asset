@@ -17,19 +17,12 @@ MonoBehaviour:
   recognitionConfidenceLevel: 1
   speechCommands:
   - localizationKey: 
-    keyword: Menu
-    keyCode: 51
-    action:
-      id: 2
-      description: Menu
-      axisConstraint: 2
-  - localizationKey: 
-    keyword: Select
+    keyword: Attack
     keyCode: 49
     action:
-      id: 1
-      description: Select
-      axisConstraint: 2
+      id: 0
+      description: None
+      axisConstraint: 0
   - localizationKey: 
     keyword: Toggle Diagnostics
     keyCode: 48
@@ -47,6 +40,27 @@ MonoBehaviour:
   - localizationKey: 
     keyword: Make Planes
     keyCode: 52
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Fire
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Zap
+    keyCode: 0
+    action:
+      id: 0
+      description: None
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Rock
+    keyCode: 0
     action:
       id: 0
       description: None

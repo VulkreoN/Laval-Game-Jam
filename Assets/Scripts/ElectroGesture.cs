@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Fireball : MonoBehaviour
+public class ElectroGesture : MonoBehaviour
 {
     public Transform LeftTumbTip;
     public Transform LeftIndexTip;
     public UnityEvent spellFired = new UnityEvent();
     private bool isFiring = false;
     public UnityEvent firingSpell = new UnityEvent();
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +23,15 @@ public class Fireball : MonoBehaviour
     {
         if (!isFiring && Vector3.Distance(LeftIndexTip.position, LeftTumbTip.position) < 0.04)
         {
-            Debug.Log("Fireball");
             isFiring = true;
+            Debug.Log("fire?");
             firingSpell.Invoke();
         }
         if (isFiring && Vector3.Distance(LeftIndexTip.position, LeftTumbTip.position) > 0.04)
         {
-            Debug.Log("Finish casting the spell");
-            spellFired.Invoke();
+            Debug.Log("fire!!");
             isFiring = false;
+            spellFired.Invoke();
         }
     }
 }
