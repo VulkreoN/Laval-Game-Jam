@@ -9,7 +9,7 @@ public class FireSpell : MonoBehaviour
     public float speed = 300f;
     public Transform Head;
 
-    public void Cast()
+    public void Cast(string hand)
     {
         Debug.Log("testing...");
         try
