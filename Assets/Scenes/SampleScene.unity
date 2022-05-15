@@ -786,8 +786,12 @@ MonoBehaviour:
   maxMobs: 10
   mobsPrefab:
   - {fileID: 12950196022170816, guid: 3387dc272411eb149938b7a9b70ab1e1, type: 3}
+  - {fileID: 3802028709366865376, guid: ead844afd8082ed48a95751e69122fba, type: 3}
+  - {fileID: 2159384970062554451, guid: fecec204fa80db5489117d530e91f99f, type: 3}
   mobsSpawnerPrefab: {fileID: 7372750107558480848, guid: 4c7a7f9e1adfbc04ca71b3f50c0b0307,
     type: 3}
+  spawners: []
+  mobs: []
 --- !u!4 &1364189520
 Transform:
   m_ObjectHideFlags: 0
