@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
     public int pv = 20;
+    public health vie;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +15,12 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        pv -= damage;
-        if (pv <= 0)
-        {
-            Debug.Log("Game Over");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        vie.SetHealth(vie.current_health - damage);
+        //if (pv <= 0)
+        //{
+        //    Debug.Log("Game Over");
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
     }
 
     // Update is called once per frame

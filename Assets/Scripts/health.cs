@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class health : MonoBehaviour
     {
         slider.value = value;
         current_health = value;
+        if (current_health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
 }
