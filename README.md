@@ -1,4 +1,3 @@
-\
 # Laval Game Jam - Ready Developer One
 
 <details>
